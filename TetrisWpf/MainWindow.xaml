@@ -1,0 +1,70 @@
+﻿<Window x:Class="TetrisWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TetrisWpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="640" Width="480">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Menu Grid.Row="0" VerticalAlignment="Top">
+            <MenuItem Header="Fájl">
+                <MenuItem Header="Új játék" Command="{Binding NewGameCommand}" />
+                <Separator />
+                <MenuItem Header="Játék betöltése..." Command="{Binding LoadGameCommand}" />
+                <MenuItem Header="Játék mentése..." Command="{Binding SaveGameCommand}" />
+                <Separator />
+                <MenuItem Header="Kilépés" Command="{Binding ExitGameCommand}" />
+            </MenuItem>
+
+            <MenuItem Header="Pálya méret">
+                <MenuItem Header="Kicsi" IsCheckable="True" IsChecked="{Binding IsGameSmall}" />
+                <MenuItem Header="Közepes" IsCheckable="True" IsChecked="{Binding IsGameMedium}" />
+                <MenuItem Header="Nagy" IsCheckable="True" IsChecked="{Binding IsGameLarge}" />
+            </MenuItem>
+
+            <MenuItem Header="Pause" Command="{Binding PauseGameCommand}" x:Name="Pause"/>
+
+        </Menu>
+
+        <ItemsControl Grid.Row="1" ItemsSource="{Binding Fields}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="{Binding GameSize}" Rows="16" />
+                </ItemsPanelTemplate>
+
+            </ItemsControl.ItemsPanel>
+
+            <ItemsControl.ItemTemplate >
+                <DataTemplate>
+                    <Grid SnapsToDevicePixels="True">
+                        <Canvas Width="40" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{Binding Color}" x:Name="CanvasBoard"/>
+                    </Grid>
+
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+
+        <StatusBar Grid.Row="2" VerticalAlignment="Bottom">
+            <!-- státuszsor az időhöz -->
+            <StatusBarItem>
+                <TextBlock Text="Játékidő: " />
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock Text="{Binding GameTime}" />
+            </StatusBarItem>
+            <Separator />
+            <StatusBarItem />
+        </StatusBar>
+    </Grid>
+</Window>

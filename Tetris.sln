@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tetris", "Tetris\Tetris.csproj", "{51B10312-53C2-46CD-8EBF-BBDE8C34B320}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TetrisForms", "TetrisForms\TetrisForms.csproj", "{FAF7A688-299E-4F38-93E6-55C031357A86}"
+	ProjectSection(ProjectDependencies) = postProject
+		{51B10312-53C2-46CD-8EBF-BBDE8C34B320} = {51B10312-53C2-46CD-8EBF-BBDE8C34B320}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TetrisGameModelTest", "TetrisGameModelTest\TetrisGameModelTest.csproj", "{8CC36439-1794-447E-8966-1D97A47CA2DE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{51B10312-53C2-46CD-8EBF-BBDE8C34B320} = {51B10312-53C2-46CD-8EBF-BBDE8C34B320}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TetrisWpf", "TetrisWpf\TetrisWpf.csproj", "{D4636812-E1B0-4456-B64E-F0789F8B1475}"
+	ProjectSection(ProjectDependencies) = postProject
+		{51B10312-53C2-46CD-8EBF-BBDE8C34B320} = {51B10312-53C2-46CD-8EBF-BBDE8C34B320}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51B10312-53C2-46CD-8EBF-BBDE8C34B320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51B10312-53C2-46CD-8EBF-BBDE8C34B320}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51B10312-53C2-46CD-8EBF-BBDE8C34B320}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51B10312-53C2-46CD-8EBF-BBDE8C34B320}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAF7A688-299E-4F38-93E6-55C031357A86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAF7A688-299E-4F38-93E6-55C031357A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAF7A688-299E-4F38-93E6-55C031357A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAF7A688-299E-4F38-93E6-55C031357A86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CC36439-1794-447E-8966-1D97A47CA2DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CC36439-1794-447E-8966-1D97A47CA2DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CC36439-1794-447E-8966-1D97A47CA2DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CC36439-1794-447E-8966-1D97A47CA2DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4636812-E1B0-4456-B64E-F0789F8B1475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4636812-E1B0-4456-B64E-F0789F8B1475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4636812-E1B0-4456-B64E-F0789F8B1475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4636812-E1B0-4456-B64E-F0789F8B1475}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC5D0B1B-4559-432F-B56C-E12B192480B8}
+	EndGlobalSection
+EndGlobal
